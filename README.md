@@ -8,7 +8,7 @@ The original blog post: [pinkyPromise: JavaScript Promises in 27 Lines of Code](
 
 ```javascript
 //  take an async function
-function addAsync(data, cb) {  
+function addAsync(n, cb) {  
     setTimeout(function() {
         cb(n + 1);
     }, 100);
