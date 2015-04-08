@@ -6,12 +6,14 @@ The original blog post:
 http://henleyedition.com/pinkypromise-javascript-promises-in-27-lines-of-code/
 
 ```javascript
+//  async function
 function addAsync(data, cb) {  
     setTimeout(function() {
         cb(n + 1);
     }, 100);
 }
 
+// wrap the function to return a promise
 addAsync = function() {  
     var promise = pinkyPromise();
 
@@ -24,11 +26,12 @@ addAsync = function() {
 
 var data = 1;
 
+// promise away :)
 addAsync(data)  
     .then(addAsync)
     .then(addAsync)
     .then(function(result) {
-        console.log(result);
+        console.log(result); // => 4
     });
 
 ```
