@@ -15,7 +15,7 @@ function addAsync(data, cb) {
 }
 
 // wrap it and return a promise
-addAsync = function() {  
+addAsync = function(n) {  
     var promise = pinkyPromise();
 
     addAsync(data, function(n) {
