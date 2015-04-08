@@ -4,6 +4,8 @@
 
 The original blog post: http://henleyedition.com/pinkypromise-javascript-promises-in-27-lines-of-code/.
 
+## Usage
+
 ```javascript
 //  take an async function
 function addAsync(data, cb) {  
