@@ -18,8 +18,8 @@ function addAsync(n, cb) {
 addAsync = function(n) {  
     var promise = pinkyPromise();
 
-    addAsync(data, function(n) {
-        promise.resolve(n);
+    addAsync(n, function(ret) {
+        promise.resolve(ret);
     });
 
     return promise;
