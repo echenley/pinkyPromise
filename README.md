@@ -4,3 +4,31 @@
 
 The original blog post:
 http://henleyedition.com/pinkypromise-javascript-promises-in-27-lines-of-code/
+
+```javascript
+function addAsync(data, cb) {  
+    setTimeout(function() {
+        cb(n + 1);
+    }, 100);
+}
+
+addAsync = function() {  
+    var promise = pinkyPromise();
+
+    addAsync(data, function(n) {
+        promise.resolve(n);
+    });
+
+    return promise;
+};
+
+var data = 1;
+
+addAsync(data)  
+    .then(addAsync)
+    .then(addAsync)
+    .then(function(result) {
+        console.log(result);
+    });
+
+```
