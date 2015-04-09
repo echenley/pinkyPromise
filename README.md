@@ -15,15 +15,7 @@ function addAsync(n, cb) {
 }
 
 // wrap it and return a promise
-var addAsyncPromise = function(n) {  
-    var promise = pinkyPromise();
-
-    addAsync(n, function(ret) {
-        promise.resolve(ret);
-    });
-
-    return promise;
-};
+var addAsyncPromise = pinkyPromise(addAsync);
 
 var data = 1;
 
