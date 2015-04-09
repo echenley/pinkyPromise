@@ -2,7 +2,7 @@
 
 `pinkyPromise` is an ultra-bare-bones JavaScript implementation of promises intended to provide insight into the inner workings of JavaScript promises.
 
-The original blog post: [pinkyPromise: JavaScript Promises in 27 Lines of Code](http://henleyedition.com/pinkypromise-javascript-promises-in-27-lines-of-code/). (it's up to 39 now...)
+The original blog post: [pinkyPromise: JavaScript Promises in 27 Lines of Code](http://henleyedition.com/pinkypromise-javascript-promises-in-27-lines-of-code/). (it's slightly longer now...)
 
 ## Usage
 
