@@ -2,6 +2,7 @@ function pinkyPromise() {
     var queue = [];
     
     function promisify(fn) {
+        // converts fn to return promise
         return function(arg) {
             var promise = pinkyPromise();
         
