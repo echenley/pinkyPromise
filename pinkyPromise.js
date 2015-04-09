@@ -1,6 +1,18 @@
 function pinkyPromise() {
     var queue = [];
     
+    function promisify(fn) {
+        return function(arg) {
+            var promise = pinkyPromise();
+        
+            fn(arg, function(ret) {
+                promise.resolve(ret);
+            });
+        
+            return promise;
+        };
+    }
+    
     function resolve(ret) {
         if (!queue.length) {
             return;
@@ -14,7 +26,7 @@ function pinkyPromise() {
         }
     }
     
-    return {
+    return fn ? promisify(fn) : {
         then: function(cb) {
             if (cb) {
                 // add cb to queue
