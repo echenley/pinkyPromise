@@ -8,6 +8,7 @@ function pinkyPromise(fn) {
         return function() {
             var promise = pinkyPromise();
             var args = Array.prototype.slice.call(arguments);
+
             // add promise.resolve as final argument
             args.push(promise.resolve);
 

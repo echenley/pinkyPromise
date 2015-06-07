@@ -1,6 +1,7 @@
 {
-  "preset": "google",
+  "preset": "airbnb",
   "disallowSpacesInAnonymousFunctionExpression": null,
   "excludeFiles": ["node_modules/**"],
-  "validateIndentation": 4
+  "validateIndentation": 4,
+  "requirePaddingNewLinesAfterBlocks": null
 }

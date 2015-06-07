@@ -1,10 +1,11 @@
+'use strict';
 
 var pinkyPromise = require('../pinkyPromise');
 
 function addAsync(n, cb) {
     setTimeout(function() {
         cb(n + 1);
-    }, 1000);
+    }, 100);
 }
 
 describe('pinkyPromise', function() {
