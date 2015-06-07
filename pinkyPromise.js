@@ -1,21 +1,25 @@
-function pinkyPromise() {
+'use strict';
+
+function pinkyPromise(fn) {
     var queue = [];
-    
+
     function promisify(fn) {
-        // converts fn to return promise
-        return function(arg) {
+        // converts fn w/ callback to return promise
+        return function() {
             var promise = pinkyPromise();
-        
-            fn(arg, function(ret) {
-                promise.resolve(ret);
-            });
-        
+            var args = Array.prototype.slice.call(arguments);
+            // add promise.resolve as final argument
+            args.push(promise.resolve);
+
+            fn.apply(this, args);
+
             return promise;
         };
     }
-    
+
     function resolve(ret) {
         if (!queue.length) {
+            // no more callbacks
             return;
         } else if (ret && ret.then) {
             // ret is a promise
@@ -26,7 +30,9 @@ function pinkyPromise() {
             resolve(newRet);
         }
     }
-    
+
+    // if fn, return promisified fn
+    // otherwise return a promise
     return fn ? promisify(fn) : {
         then: function(cb) {
             if (cb) {
@@ -36,5 +42,7 @@ function pinkyPromise() {
             return this;
         },
         resolve: resolve
-    }
+    };
 }
+
+module.exports = pinkyPromise;

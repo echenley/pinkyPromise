@@ -1,0 +1,25 @@
+{
+  "name": "pinkyPromise",
+  "version": "0.0.1",
+  "description": "A bare-bones JavaScript Promises library",
+  "main": "pinkyPromise.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echenley/pinkyPromise"
+  },
+  "keywords": [
+    "promise",
+    "javascript",
+    "functional"
+  ],
+  "author": "Evan Henley (echenley)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/echenley/pinkyPromise/issues"
+  },
+  "homepage": "https://github.com/echenley/pinkyPromise",
+  "devDependencies": {}
+}
