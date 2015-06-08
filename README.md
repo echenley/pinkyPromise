@@ -1,6 +1,6 @@
 # pinkyPromise
 
-`pinkyPromise` is an ultra-bare-bones JavaScript implementation of promises intended to provide insight into the inner workings of JavaScript promises.
+`pinkyPromise` is an ultra-bare-bones promises library intended to provide insight into the inner workings of JavaScript promises.
 
 The original blog post: [pinkyPromise: JavaScript Promises in 45 Lines of Code](http://henleyedition.com/pinkypromise-javascript-promises-in-45-lines-of-code/).
 
