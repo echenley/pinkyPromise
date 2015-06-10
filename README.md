@@ -22,6 +22,8 @@ var data = 1;
 incrementAsyncPromise(data)  
     .then(incrementAsyncPromise)
     .then(incrementAsyncPromise)
-    .then(console.log); // => 4
+    .then(function(n) {
+        console.log(n) // => 4
+    });
 
 ```
